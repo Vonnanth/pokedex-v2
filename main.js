@@ -25,7 +25,6 @@ const get_pokemons_data = async (limit, offset) => {
 
         pokemons_data[i] = {
             name: poke_info.name,
-            color: get_color_pokemon()[i],
             info: poke_info,
         }
     }
@@ -44,7 +43,6 @@ const render_pokemons = (poke_data, limit, offset) => {
                             <img src="${pokemon.info.sprites.front_default}" class="card-img-top z-3" alt="pokemon-image">
                             <div class="card-body rounded-top w-100 d-flex flex-column justify-content-end" style="background-color: #f2f2f2; height: 80px !important; margin-top: -40px">
                                 <h5 class="fw-bold">${pokemon.name}</h5>
-                                <!-- <p class="card-text text-center">${pokemon.descriptions ?? 'Sem informações'}</p> -->
                             </div>
                         </button>
                     </div>
